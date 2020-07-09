@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{name}}
+{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+      
+<a href="{%url 'edit_page' name%}"><i class="fa fa-edit" style="font-size:24px"></i>Edit Page</a>
+      
+{{content|safe}}
+
+{% endblock %}

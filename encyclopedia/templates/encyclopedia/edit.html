@@ -1,0 +1,29 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ page_title }}
+{% endblock %}
+
+{% block body %}
+<form class="text-center border border-light p-5" action="" method="POST">
+    {% csrf_token %} 
+    <div class="contact-h4">
+      
+      <p class="h4 mb-4 contact-h4"><h2>Edit Page(<a href="{%url 'page' page_title%}">{{page_title}}</a>)<i class="fa fa-edit" style="font-size:24px"></i></p></h2>
+    </div>
+   
+<!-- Message -->
+<div class="form-group">
+
+    <textarea class="form-control " id="exampleFormControlTextarea2" rows="17" placeholder="Entry" name="edit-content">{{ content }}</textarea>
+</div>
+
+
+<!-- Send button -->
+<button class="btn btn-info btn-block" type="submit">Save changes</button>
+
+</form>
+
+
+   
+{% endblock %}

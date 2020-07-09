@@ -1,0 +1,43 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+
+{% block body %}
+    
+ 
+  
+   
+
+  
+ 
+  <form class="text-center border border-light p-5" action="" method="POST">
+        {% csrf_token %} 
+        <div class="contact-h4">
+          <br>
+          <p class="h4 mb-4 contact-h4"><h2>New Entry</p></h2>
+        </div>
+        <br>
+        
+       <h4> {{title}} {{message}}</h4>
+    <!-- Name -->
+    <input type="text" id="defaultContactFormName" class="form-control " placeholder="Name" name="title">
+
+
+<br>
+  
+    <!-- Message -->
+    <div class="form-group">
+
+        <textarea class="form-control " id="exampleFormControlTextarea2" rows="12" placeholder="Entry" name="content"></textarea>
+    </div>
+  
+  
+    <!-- Send button -->
+    <button class="btn btn-info btn-block" type="submit">Send</button>
+  
+  </form>
+
+{% endblock %}
